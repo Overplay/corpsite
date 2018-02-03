@@ -465,5 +465,17 @@ a.learnbutton:hover span:after {
     margin-bottom: 15px; /* added this because now the header was shrinking to the bottom of the text, this makes it more comfortable */
 }
 
+.google-play {
+
+    background:black;
+    border:1px solid white;
+    border-radius:6px;
+    box-sizing:border-box;
+    height: 40px;
+    background:#888;
+    display:inline-block;
+    height:40px;
+}
+
 
 
