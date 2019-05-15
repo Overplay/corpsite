@@ -1,6 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+    <!-- Load Harbor Web Beacon for JavaScript -->
+    <script async src="https://cloud.hrbr.io/src/beacon.js?id=APPLICATION_VERSION_ID"></script>
+    <script>
+        // Instructs beacon.js to use the name `hb`.
+        window.HarborBeaconObject = 'hb';
+        // Comment this line out to disable really verbose console.logging.
+        window.hb_debug = {trace : true };
+        // Creates an initial hb() function.
+        // The queued commands will be executed once beacon.js loads.
+        window.hb = window.hb || function() {
+            (window.hb.q = window.hb.q || []).push(arguments)
+        };
+        window.hb.l = +new Date;
+        hb(function () {
+            hb('create', '4407e328f8403db7bf3fd9fca7ac9d6f',
+                'tv.ourglass:1.0.0',
+                'web-beacon',
+                { 'beaconInstanceId': 'Trebs Test Beacon' });
+            hb('send', 'WEB_BEACON_CREATED');
+        });
+    </script>
+
     <!-- new head of MASTER 3/1/2016 -->
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
